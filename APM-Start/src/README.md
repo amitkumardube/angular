@@ -31,5 +31,5 @@
 <b>What is property binding</b>
 - Property binding is about binding the property of an element with property in the class.
 - it's like interpolation 
-- example : <img [src]='product.imageUrl'> -- this is called property binding
-            <img src={{product.imageUrl}}> -- this is called interpolation
+- <img [src]='product.imageUrl'> -- this is called property binding
+- <img src={{product.imageUrl}}> -- this is called interpolation
