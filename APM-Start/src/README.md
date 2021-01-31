@@ -24,4 +24,12 @@
 <p>It's a function that adds metadata to a class, its members, or its method arguments.</p>
 
 <b>What is [module] in Angular</b>
-<p>Modules in Angular organize the application by defining the oraganizing components and services.</p>
+- Modules in Angular organize the application by defining the oraganizing components and services.
+- Modules define organization boundaries.
+- They provide template resolution environment.
+
+<b>What is property binding</b>
+- Property binding is about binding the property of an element with property in the class.
+- it's like interpolation 
+- example : <img [src]='product.imageUrl'> -- this is called property binding
+            <img src={{product.imageUrl}}> -- this is called interpolation
