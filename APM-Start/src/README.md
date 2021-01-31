@@ -28,8 +28,40 @@
 - Modules define organization boundaries.
 - They provide template resolution environment.
 
-<b>What is property binding</b>
+<b>What is [property] binding</b>
 - Property binding is about binding the property of an element with property in the class.
 - it's like interpolation 
 - <img [src]='product.imageUrl'> -- this is called property binding
 - <img src={{product.imageUrl}}> -- this is called interpolation
+
+<b>What is [event] binding?</b>
+- Event binding is the way to bind event through user actions to class.
+- The event binding will execute a function in the class when a certain event is triggered.
+- <button (click) = 'toggleImage()'>
+
+<b>What is two way binding?</b>
+- It's binding from class to template and vice versa.
+- <input [(ngModel)]='listFilter'>
+
+<b> What are pipes in Angular? </b>
+- Pipe tranforms bound properties before they are displayed.
+- Pipes are needed when data is not in the correct format to display.
+- {{ product.productCode | lowercase }}
+
+<b> Type of data bindings </b>
+- Interpolation : {{pageTitle}} - From class to template
+- Property Binding : <img [src]='product.imageUrl'>  - From class to template
+- Event Binding : <button (click)='toggleImage()'> - From template to class
+- Two-Way Binding : <input [(ngModel)] = 'listFilter'/> - It's connected at both ends.
+
+<b> Style Encapsulation </b>
+- This encapsulates the style with a component.
+- This can done using style or styleUrls properties.
+- Change in a style in this setup only impact that component thus providing full encapsulation.
+
+<b> Component Lifecycle Hooks </b>
+- Angular components has a life cycle.
+- Create -> Render -> Create and Render Children -> Process Changes -> Destroy.
+- Angular provides life cycle hooks to tap into these steps and perform operations as needed.
+- 3 most basic life cycle hooks - OnInit , OnChanges , OnDestroy.
+
