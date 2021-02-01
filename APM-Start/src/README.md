@@ -65,3 +65,7 @@
 - Angular provides life cycle hooks to tap into these steps and perform operations as needed.
 - 3 most basic life cycle hooks - OnInit , OnChanges , OnDestroy.
 
+<b> Interfaces in Angular </b>
+- You can create your own interface and then create a variable of it's type.
+- You can also implements Angular's existing interface using implements keyword.
+- One thing to note , you need to define all the properties and methods of an implemented interface.
