@@ -3,13 +3,14 @@ import {IProduct} from './product';
 import {ProductService} from './product.service'
 
 @Component({
-    selector: 'pm-products',
+//    selector: 'pm-products',
     templateUrl: './product-list.component.html',
     styleUrls: ['./product-list.component.css']
 })
 
 export class ProductListComponent implements OnInit{
-
+  // constructor is called when an instance of component is being created.
+  // this is the perfect place to get the instance for the service we need.
   constructor(private productService : ProductService){
     //this.listFilter = 'cart';
   }
@@ -18,6 +19,9 @@ export class ProductListComponent implements OnInit{
     return this.products.filter((product: IProduct) =>
       product.productName.toLocaleLowerCase().indexOf(filterBy) !== -1);
   }
+
+  // OnInit lifecycle hook is being called when object is initializing.
+  // this is the perfect place to all the function from service to get the data.
   ngOnInit(): void {
     console.log('In OnInit');
     this.productService.getProducts().subscribe({

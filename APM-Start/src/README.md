@@ -69,3 +69,32 @@
 - You can create your own interface and then create a variable of it's type.
 - You can also implements Angular's existing interface using implements keyword.
 - One thing to note , you need to define all the properties and methods of an implemented interface.
+
+<b> Nested components in Angular </b>
+- Nesting is like putting the child component inside a main component.
+- We do nesting for reusable components.
+- The child component should be able to send information to container component. This is achieved by @Output decorator and EventEmitter. The Emit method of EventEmitter is used to emit this event.
+- The Container component should also be able to send information to child component. This is done by property binding. The property of the component decorated with @Input can be used to pass value from container.
+
+<b> Services in Angular </b>
+- Services provides data to the components which are part of your Angular application.
+- It's a class with specific purpose.
+- They are indepdant to any particular component.
+- Encapsulate external dependency - like assessing data.
+- Angular has injectors where a service needs to be registered. This is also called singleton.
+- The component that needs the service can use it via dependency injection.
+
+<b> What is dependency Injection </b>
+<p>A pattern in which a class receives the instances of objects it needs ( dependencies) from an external source rather than creating itself. This is called Injector in Angular.</p>
+
+<b> How to register a service </b>
+- The service can be registered to any injector component where it needs to be used. When registered this way, it can only be used by that component and it's children.
+- The service can also be registered at root injector and then it can be used by all the components in the application.
+
+<b> What are observables in Angular </b>
+- Observables helps manage asyncohronous data.
+- It's an array whose items arrive asynchronously over time.
+- Subscribe to receive notifications.
+
+<b> Angular CLI commands </b>
+- ng g c products/product-detail --flat  // this creates a new component with name product-detail

@@ -4,6 +4,10 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http'
 import { Observable, throwError } from 'rxjs';
 import { tap , catchError } from 'rxjs/operators'
 
+
+// decorating the class with injectable declarator. Its like registering it with injector.
+// currently it's registered with root injector which means that the instance for this service is available  for injection anywhere in the application.
+
 @Injectable({
     providedIn: 'root'
 })
